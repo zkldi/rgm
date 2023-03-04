@@ -4,6 +4,8 @@ This is a clone of TGM1 built with Rust. I built this to learn Rust, don't take 
 
 It's not pretty, and it's not intended to actually be played seriously - it's only the bare minimum to be a clone.
 
+![](https://cdn.discordapp.com/attachments/936444803460235306/1081394914950135958/Peek_2023-03-04_01-53.gif)
+
 ## Instructions
 
 `cargo run`
