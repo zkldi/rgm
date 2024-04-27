@@ -4,7 +4,7 @@ This is a clone of TGM1 built with Rust. I built this to learn Rust, don't take 
 
 It's not pretty, and it's not intended to actually be played seriously - it's only the bare minimum to be a clone.
 
-![](whereverthisshallbe)
+![](https://github.com/zkldi/rgm/raw/master/.github/rgm.webm)
 
 ## Instructions
 
