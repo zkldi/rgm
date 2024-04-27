@@ -9,7 +9,7 @@ use core::panic;
 use ggez::conf::{Conf, WindowSetup};
 use ggez::event::{self, EventHandler};
 use ggez::glam::Vec2;
-use ggez::graphics::Text;
+use ggez::graphics::{DrawParam, Quad, Rect, Text};
 use ggez::{
 	graphics::{self, Color},
 	Context, ContextBuilder, GameResult,
@@ -21,6 +21,7 @@ use piece::{Piece, PieceType};
 use rand::rngs::ThreadRng;
 use rand::Rng;
 use scoring::{update_record, GMRequirements, Grade, PlayerRecord};
+use std::time::Duration;
 use std::{collections::VecDeque, time::SystemTime};
 
 const FPS: u32 = 60;
@@ -193,7 +194,7 @@ impl EventHandler for GameState {
 						// initial fall: todo investigate why
 
 						if let Some(next_st) =
-							fall(st.piece, &self.board, self.level, st.gravity_frames as i32)
+							fall(st.piece, &self.board, self.level, st.gravity_frames)
 						{
 							st.piece = next_st;
 						}
@@ -207,7 +208,7 @@ impl EventHandler for GameState {
 							&self.board,
 						);
 
-						match fall(st.piece, &self.board, self.level, st.gravity_frames as i32) {
+						match fall(st.piece, &self.board, self.level, st.gravity_frames) {
 							Some(next_st) => {
 								// piece is not on the floor
 								st.lock_frames = 0;

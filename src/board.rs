@@ -34,13 +34,13 @@ impl Display for Board {
 		for row in self.state.iter().rev() {
 			for sqr in row {
 				if matches!(sqr, Square::Filled(_)) {
-					write!(f, "X");
+					write!(f, "X")?;
 				} else {
-					write!(f, ".");
+					write!(f, ".")?;
 				}
 			}
 
-			write!(f, "\n");
+			write!(f, "\n")?;
 		}
 
 		Ok(())

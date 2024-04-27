@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 backtrace-on-stack-overflow = "0.3.0"
-ggez = "0.8.1"
+ggez = "0.9.3"
 rand = "0.8.5"
 strum = "0.24.1"
 strum_macros = "0.24.3"
